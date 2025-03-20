@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Result</title>
+</head>
+<body>
+    <h2>Analysis Result</h2>
+    <p><strong>Number of Sentences:</strong> {{ num_sentences }}</p>
+    <p><strong>Number of Words:</strong> {{ num_words }}</p>
+    <p><strong>Number of Words (After Stopword Removal):</strong> {{ num_filtered_words }}</p>
+
+    <h3>Word Frequency:</h3>
+    <ul>
+        {% for word, count in word_freq.items() %}
+            <li>{{ word }}: {{ count }}</li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <a href="/">Analyze Another Paragraph</a>
+</body>
+</html>
